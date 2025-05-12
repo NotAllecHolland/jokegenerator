@@ -1,0 +1,152 @@
+/* Main container styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 600px;
+  width: 90%;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.app-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-title i {
+  margin-right: 10px;
+  color: #FF8C00;
+}
+
+.app-subtitle {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Controls section */
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.category-selector {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.get-joke-btn {
+  background-color: #FF8C00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-joke-btn:hover {
+  background-color: #F47B00;
+}
+
+.get-joke-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Joke display section */
+.joke-container {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.joke-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.joke-setup {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.joke-punchline {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FF8C00;
+  text-align: center;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.loading-spinner i {
+  color: #FF8C00;
+  font-size: 2rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error message */
+.error-message {
+  color: #d9534f;
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8d7da;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .controls {
+    flex-direction: column;
+  }
+  
+  .app-title {
+    font-size: 1.8rem;
+  }
+  
+  .joke-text, .joke-setup, .joke-punchline {
+    font-size: 1rem;
+  }
+}
